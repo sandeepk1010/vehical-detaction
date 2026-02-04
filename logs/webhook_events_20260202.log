@@ -1,0 +1,248 @@
+2026-02-02 20:37:27 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 20:40:10 - INFO - === UNIFIED SERVER STARTED (Port 8083) ===
+2026-02-02 20:42:27 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 20:47:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 20:52:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 20:57:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:02:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:07:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:12:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:17:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:22:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:27:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:32:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:37:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:42:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:47:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:52:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 21:57:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:02:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:07:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:12:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:17:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:22:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:27:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:32:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:37:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:42:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:47:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:52:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 22:57:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:02:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:07:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:12:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:17:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:22:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:27:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:32:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:37:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:42:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:47:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:49:50 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #1 - Plate: MH17CJ7147, Saved: 1 images
+2026-02-02 23:49:50 - INFO - JSON saved: vehicle_1_20260202_234950.json
+2026-02-02 23:52:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-02 23:57:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:01:32 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #2 - Plate: MH16CD4299, Saved: 1 images
+2026-02-03 00:01:32 - INFO - JSON saved: vehicle_2_20260203_000132.json
+2026-02-03 00:02:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:06:57 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #3 - Plate: 104140, Saved: 1 images
+2026-02-03 00:06:57 - INFO - JSON saved: vehicle_3_20260203_000657.json
+2026-02-03 00:07:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:08:44 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #4 - Plate: MH17AT7147, Saved: 1 images
+2026-02-03 00:08:44 - INFO - JSON saved: vehicle_4_20260203_000844.json
+2026-02-03 00:12:16 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #5 - Plate: MH17CU7147, Saved: 1 images
+2026-02-03 00:12:16 - INFO - JSON saved: vehicle_5_20260203_001216.json
+2026-02-03 00:12:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:16:41 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #6 - Plate: MH17BY5395, Saved: 1 images
+2026-02-03 00:16:41 - INFO - JSON saved: vehicle_6_20260203_001641.json
+2026-02-03 00:17:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:22:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:27:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:32:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:37:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:42:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:46:37 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #7 - Plate: MH15JW0603, Saved: 1 images
+2026-02-03 00:46:37 - INFO - JSON saved: vehicle_7_20260203_004637.json
+2026-02-03 00:47:28 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:52:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 00:57:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:01:07 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #8 - Plate: JL26, Saved: 0 images
+2026-02-03 01:01:07 - INFO - JSON saved: vehicle_8_20260203_010107.json
+2026-02-03 01:02:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:07:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:12:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:17:01 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #9 - Plate: 1MVA, Saved: 0 images
+2026-02-03 01:17:01 - INFO - JSON saved: vehicle_9_20260203_011701.json
+2026-02-03 01:17:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:22:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:27:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:32:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:37:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:42:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:47:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:52:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 01:57:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:02:29 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:07:10 - INFO - POST /webhook - VEHICLE #10 - received payload
+2026-02-03 02:07:10 - INFO - JSON saved: webhook_10_20260203_020710.json
+2026-02-03 02:11:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:16:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:21:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:26:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:27:19 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #11 - Plate: T211, Saved: 0 images
+2026-02-03 02:27:19 - INFO - JSON saved: vehicle_11_20260203_022719.json
+2026-02-03 02:31:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:33:24 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #12 - Plate: MH5AK8807, Saved: 0 images
+2026-02-03 02:33:24 - INFO - JSON saved: vehicle_12_20260203_023324.json
+2026-02-03 02:34:04 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #13 - Plate: MH15AV3096, Saved: 0 images
+2026-02-03 02:34:04 - INFO - JSON saved: vehicle_13_20260203_023404.json
+2026-02-03 02:36:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:36:33 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #14 - Plate: MH15CV8806, Saved: 1 images
+2026-02-03 02:36:33 - INFO - JSON saved: vehicle_14_20260203_023633.json
+2026-02-03 02:37:14 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #15 - Plate: HM6AK3343, Saved: 1 images
+2026-02-03 02:37:14 - INFO - JSON saved: vehicle_15_20260203_023714.json
+2026-02-03 02:41:17 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:46:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:51:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 02:56:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:01:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:01:50 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #16 - Plate: FT00IC0521, Saved: 0 images
+2026-02-03 03:01:50 - INFO - JSON saved: vehicle_16_20260203_030150.json
+2026-02-03 03:06:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:11:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:16:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:21:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:23:08 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #17 - Plate: MH15FV1458, Saved: 1 images
+2026-02-03 03:23:08 - INFO - JSON saved: vehicle_17_20260203_032308.json
+2026-02-03 03:23:47 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #18 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 03:23:47 - INFO - JSON saved: vehicle_18_20260203_032347.json
+2026-02-03 03:26:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:31:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:35:35 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #19 - Plate: MH05BW2351, Saved: 0 images
+2026-02-03 03:35:35 - INFO - JSON saved: vehicle_19_20260203_033535.json
+2026-02-03 03:36:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:37:33 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #20 - Plate: MH0BW2352, Saved: 1 images
+2026-02-03 03:37:33 - INFO - JSON saved: vehicle_20_20260203_033733.json
+2026-02-03 03:41:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:44:10 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #21 - Plate: MH15W0701, Saved: 1 images
+2026-02-03 03:44:10 - INFO - JSON saved: vehicle_21_20260203_034410.json
+2026-02-03 03:46:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:49:37 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #22 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 03:49:37 - INFO - JSON saved: vehicle_22_20260203_034937.json
+2026-02-03 03:51:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:55:20 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #23 - Plate: MH15W0803, Saved: 1 images
+2026-02-03 03:55:20 - INFO - JSON saved: vehicle_23_20260203_035520.json
+2026-02-03 03:56:07 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #24 - Plate: MH13843, Saved: 1 images
+2026-02-03 03:56:07 - INFO - JSON saved: vehicle_24_20260203_035607.json
+2026-02-03 03:56:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 03:57:47 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #25 - Plate: MH15HH3896, Saved: 0 images
+2026-02-03 03:57:47 - INFO - JSON saved: vehicle_25_20260203_035747.json
+2026-02-03 04:01:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:06:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:11:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:11:45 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #26 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 04:11:45 - INFO - JSON saved: vehicle_26_20260203_041145.json
+2026-02-03 04:16:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:21:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:26:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:30:27 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #27 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 04:30:27 - INFO - JSON saved: vehicle_27_20260203_043027.json
+2026-02-03 04:31:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:36:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:41:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:46:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:51:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:52:37 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #28 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 04:52:37 - INFO - JSON saved: vehicle_28_20260203_045237.json
+2026-02-03 04:56:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 04:57:54 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #29 - Plate: MH15HH3596, Saved: 1 images
+2026-02-03 04:57:54 - INFO - JSON saved: vehicle_29_20260203_045754.json
+2026-02-03 05:01:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:06:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:11:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:11:51 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #30 - Plate: MH15FV9318, Saved: 1 images
+2026-02-03 05:11:51 - INFO - JSON saved: vehicle_30_20260203_051151.json
+2026-02-03 05:16:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:21:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:26:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:31:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:36:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:41:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:46:18 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:51:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 05:51:44 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #31 - Plate: Y017, Saved: 0 images
+2026-02-03 05:51:44 - INFO - JSON saved: vehicle_31_20260203_055144.json
+2026-02-03 05:56:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:01:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:06:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:11:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:16:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:21:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:26:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:31:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:36:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:41:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:46:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:51:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 06:56:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:01:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:06:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:06:29 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #32 - Plate: MH15JC8629, Saved: 1 images
+2026-02-03 07:06:29 - INFO - JSON saved: vehicle_32_20260203_070629.json
+2026-02-03 07:11:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:16:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:21:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:26:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:31:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:36:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:41:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:46:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:51:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:56:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 07:57:53 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #33 - Plate: KR15CV4230, Saved: 1 images
+2026-02-03 07:57:53 - INFO - JSON saved: vehicle_33_20260203_075753.json
+2026-02-03 08:01:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:01:22 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #34 - Plate: MH15JC7270, Saved: 1 images
+2026-02-03 08:01:22 - INFO - JSON saved: vehicle_34_20260203_080122.json
+2026-02-03 08:06:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:11:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:16:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:21:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:25:02 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #35 - Plate: RTP2, Saved: 0 images
+2026-02-03 08:25:02 - INFO - JSON saved: vehicle_35_20260203_082502.json
+2026-02-03 08:26:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:31:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:36:08 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #36 - Plate: MH1SHH3596, Saved: 1 images
+2026-02-03 08:36:08 - INFO - JSON saved: vehicle_36_20260203_083608.json
+2026-02-03 08:36:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:38:16 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #37 - Plate: HW3343, Saved: 1 images
+2026-02-03 08:38:16 - INFO - JSON saved: vehicle_37_20260203_083816.json
+2026-02-03 08:41:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:46:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:51:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 08:56:19 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:01:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:06:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:10:42 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #38 - Plate: MH10G9924, Saved: 1 images
+2026-02-03 09:10:42 - INFO - JSON saved: vehicle_38_20260203_091042.json
+2026-02-03 09:11:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:16:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:21:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:26:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:31:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:33:04 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #39 - Plate: TN0A6233, Saved: 1 images
+2026-02-03 09:33:04 - INFO - JSON saved: vehicle_39_20260203_093304.json
+2026-02-03 09:36:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:41:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:46:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:51:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 09:56:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:01:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:06:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:11:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:16:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:21:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:26:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:31:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:36:20 - INFO - POST/GET /health from 192.168.1.108
+2026-02-03 10:41:20 - INFO - POST/GET /health from 192.168.1.108
