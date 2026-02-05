@@ -1,180 +1,114 @@
-from flask import Flask, request, jsonify, render_template_string
-import base64, os, json
+from flask import Flask, request, jsonify
+import os, json, uuid, logging
 from datetime import datetime
 
 app = Flask(__name__)
-recent_events = []
-vehicle_count = 0
 
-# Directories
-SAVE_DIR = "./downloads"
+# =========================
+# CAMERA IP → NAME MAP
+# =========================
+CAMERA_IP_MAP = {
+    "192.168.1.108": "camera1",
+    "192.168.1.109": "camera2",
+}
+
+# =========================
+# DIRECTORIES
+# =========================
 LOG_DIR = "./logs"
 JSON_DIR = "./json_data"
-os.makedirs(SAVE_DIR, exist_ok=True)
+
 os.makedirs(LOG_DIR, exist_ok=True)
 os.makedirs(JSON_DIR, exist_ok=True)
 
 # =========================
-# Webhook Logger (Separate File)
+# LOGGER FACTORY
 # =========================
-webhook_log_file = os.path.join(
-    os.path.abspath(LOG_DIR), f"webhook_events_{datetime.now().strftime('%Y%m%d')}.log"
-)
+def create_logger(name, filename):
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
 
-# Direct file write at startup
-try:
-    with open(webhook_log_file, 'a', encoding='utf-8') as f:
-        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - INFO - === SERVER 2 STARTED (Port 8080) ===\n")
-        f.flush()
-        os.fsync(f.fileno())
-except Exception as e:
-    print(f"[ERROR] Could not write to log: {e}")
+    if logger.handlers:
+        for h in logger.handlers[:]:
+            logger.removeHandler(h)
+            h.close()
 
-# Simple logging function that writes directly to file
-def log_event(message):
-    try:
-        with open(webhook_log_file, 'a', encoding='utf-8') as f:
-            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            f.write(f"{timestamp} - INFO - {message}\n")
-            f.flush()
-            os.fsync(f.fileno())
-    except Exception as e:
-        print(f"Log error: {e}")
+    handler = logging.FileHandler(os.path.join(LOG_DIR, filename))
+    handler.setFormatter(
+        logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    )
+    logger.addHandler(handler)
+    return logger
 
-# Function to save JSON data
-def save_json_data(data, prefix="vehicle"):
-    try:
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{prefix}_{ts}.json"
-        filepath = os.path.join(JSON_DIR, filename)
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, default=str)
-            f.flush()
-            os.fsync(f.fileno())
-        log_event(f"JSON saved: {filename}")
-        return filename
-    except Exception as e:
-        print(f"JSON save error: {e}")
-        return None
+cam1_logger = create_logger("cam1", "camera1.log")
+cam2_logger = create_logger("cam2", "camera2.log")
 
 # =========================
-# Utility: detect image type
+# COUNTERS
 # =========================
-def get_image_format(b64_data):
-    try:
-        img_bytes = base64.b64decode(b64_data)
-        if img_bytes.startswith(b'\xff\xd8\xff'):
-            return ".jpg"
-        elif img_bytes.startswith(b'\x89PNG'):
-            return ".png"
-        elif img_bytes.startswith(b'GIF87a') or img_bytes.startswith(b'GIF89a'):
-            return ".gif"
-        elif img_bytes.startswith(b'RIFF') and b'WEBP' in img_bytes[:12]:
-            return ".webp"
-        else:
-            return ".jpg"
-    except:
-        return ".jpg"
+vehicle_count = {"camera1": 0, "camera2": 0}
 
 # =========================
-# Webhook POST
+# HELPER
 # =========================
-@app.route("/webhook", methods=["POST"])
-def webhook():
+def get_camera():
+    ip = request.remote_addr
+    return CAMERA_IP_MAP.get(ip, "unknown")
+
+def save_json(camera, data):
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    event = {"ReceivedAt": datetime.now().isoformat()}
+    path = os.path.join(JSON_DIR, f"{camera}_{ts}.json")
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2, default=str)
 
-    # JSON payload
-    if request.is_json:
-        data = request.get_json(force=True)
-        event["Payload"] = data
+# =========================
+# SINGLE TOLLGATE ENDPOINT
+# =========================
+@app.route("/NotificationInfo/TollgateInfo", methods=["POST"])
+def tollgate():
+    camera = get_camera()
+    vehicle_count[camera] += 1
 
-        # Save image if exists
-        if isinstance(data, dict) and "Image" in data:
-            img_b64 = data["Image"]
-            img_ext = get_image_format(img_b64)
-            img_file = f"{data.get('Plate','UNKNOWN')}_{ts}{img_ext}"
-            with open(os.path.join(SAVE_DIR, img_file), "wb") as f:
-                f.write(base64.b64decode(img_b64))
-            event["ImageSavedAs"] = img_file
+    data = request.get_json(force=True, silent=True) or {}
+    plate = (
+        data.get("Picture", {})
+            .get("Plate", {})
+            .get("PlateNumber", "UNKNOWN")
+    )
 
-    # Non-JSON raw data
+    log_msg = (
+        f"POST /NotificationInfo/TollgateInfo "
+        f"- {camera.upper()} "
+        f"- VEHICLE #{vehicle_count[camera]} "
+        f"- Plate: {plate} "
+        f"- IP: {request.remote_addr}"
+    )
+
+    if camera == "camera2":
+        cam2_logger.info(log_msg)
     else:
-        event["RawData"] = request.data.decode(errors="ignore")
+        cam1_logger.info(log_msg)
 
-    # Multipart files
-    if request.files:
-        event["Files"] = []
-        for name, file in request.files.items():
-            img_file = f"{name}_{ts}.jpg"
-            file.save(os.path.join(SAVE_DIR, img_file))
-            event["Files"].append({"field": name, "filename": file.filename, "saved_as": img_file})
+    save_json(camera, data)
 
-    # Store event in memory
-    recent_events.insert(0, event)
-    recent_events[:] = recent_events[:20]
-
-    # Increment vehicle count and log
-    global vehicle_count
-    vehicle_count += 1
-    log_event(f"POST /webhook - VEHICLE #{vehicle_count} - received payload")
-    
-    # Save JSON data (including images as base64)
-    json_data = {
-        "vehicle_number": vehicle_count,
-        "timestamp": datetime.now().isoformat(),
-        "data": event
-    }
-    save_json_data(json_data, f"webhook_{vehicle_count}")
-
-    return jsonify({"status": "ok", "total_count": vehicle_count})
+    return jsonify(
+        status="success",
+        camera=camera,
+        plate=plate,
+        count=vehicle_count[camera]
+    )
 
 # =========================
-# GET Events
-# =========================
-@app.route("/webhook/events", methods=["GET"])
-def get_events():
-    return jsonify(recent_events)
-
-# =========================
-# Health check
+# HEALTH (POST SAFE)
 # =========================
 @app.route("/health", methods=["GET", "POST"])
-def health_check():
-    log_event(f"POST/GET /health from {request.remote_addr}")
-    return jsonify({"status": "healthy"})
+def health():
+    return jsonify(status="ok")
 
 # =========================
-# Catch 404s and log
+# RUN
 # =========================
-@app.errorhandler(404)
-def handle_404(e):
-    log_event(f"404 Error: {request.path}")
-    return jsonify(error="Resource not found", path=request.path), 404
-
-# =========================
-# Simple frontend to view events
-# =========================
-@app.route("/")
-def index():
-    return render_template_string("""
-<!doctype html>
-<html>
-<head><title>Webhook Events</title></head>
-<body>
-<h2>Webhook Events (Latest 20)</h2>
-<pre id="events"></pre>
-<script>
-async function load() {
-  const res = await fetch("/webhook/events");
-  const data = await res.json();
-  document.getElementById("events").textContent = JSON.stringify(data, null, 2);
-}
-load();
-</script>
-</body>
-</html>
-""")
-
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    print("🚀 ANPR Server Started (IP-based camera detection)")
+    app.run(host="0.0.0.0", port=5000, debug=False)
