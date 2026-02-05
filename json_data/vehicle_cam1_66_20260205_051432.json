@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 66,
+  "camera": "camera1",
+  "plate": "MH16A2284",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T05:14:32.195182",
+  "saved_images": [
+    "MH16A2284-20260204050839-plate.jpg"
+  ],
+  "request_id": "ea0211be-2430-46ae-bc47-6ed9c953fe82"
+}

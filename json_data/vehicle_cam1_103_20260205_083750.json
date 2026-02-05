@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 103,
+  "camera": "camera1",
+  "plate": "NU1RY010784",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T08:37:50.692655",
+  "saved_images": [
+    "NU1RY010784-20260204083157-plate.jpg"
+  ],
+  "request_id": "c56c71f4-8267-4626-8471-0b876942561e"
+}

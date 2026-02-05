@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify, render_template_string
 import base64, os, uuid
 from datetime import datetime
 import logging
+from simple_db import db
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 recent_events = []
@@ -88,6 +92,17 @@ def webhook():
 
     # Log to separate webhook file
     webhook_logger.info(event)
+    
+    # Save to database
+    try:
+        db.add_webhook_event(
+            event_id=str(uuid.uuid4()),
+            event_type='webhook',
+            data=event,
+            vehicle_data=data if request.is_json else None
+        )
+    except Exception as e:
+        webhook_logger.error(f"Database error: {str(e)}")
 
     return jsonify({"status": "ok"})
 
@@ -134,7 +149,25 @@ def crossing():
     if cutout: saved_files.append(cutout)
     if normal: saved_files.append(normal)
 
-    # 5. Log and Respond
+    # 5. Save detection to database
+    try:
+        db.add_vehicle_detection(
+            event_id=request_id,
+            license_plate=plate_number,
+            detection_data=data,
+            image_url=folder_name
+        )
+        
+        db.add_webhook_event(
+            event_id=request_id,
+            event_type='vehicle_detection',
+            data=data,
+            image_filename=folder_name
+        )
+    except Exception as e:
+        webhook_logger.error(f"Database error: {str(e)}")
+    
+    # 6. Log and Respond
     response_data = {
         "status": "success",
         "request_id": request_id,
@@ -148,11 +181,42 @@ def crossing():
     return jsonify(response_data), 200
 
 # =========================
-# GET Events
+# GET Events (from database)
 # =========================
 @app.route("/webhook/events", methods=["GET"])
 def get_events():
-    return jsonify(recent_events)
+    limit = request.args.get('limit', default=20, type=int)
+    try:
+        events = db.get_webhook_events(limit=limit)
+        return jsonify(events)
+    except Exception as e:
+        webhook_logger.error(f"Database error: {str(e)}")
+        return jsonify(recent_events)  # Fall back to in-memory events
+
+# =========================
+# GET Vehicle Detections
+# =========================
+@app.route("/vehicle-detections", methods=["GET"])
+def get_vehicle_detections():
+    limit = request.args.get('limit', default=50, type=int)
+    try:
+        detections = db.get_vehicle_detections(limit=limit)
+        return jsonify(detections)
+    except Exception as e:
+        webhook_logger.error(f"Database error: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+
+# =========================
+# GET Vehicle Detections by Plate
+# =========================
+@app.route("/vehicle-detections/<plate>", methods=["GET"])
+def get_vehicle_by_plate(plate):
+    try:
+        detections = db.get_vehicle_by_plate(plate)
+        return jsonify(detections)
+    except Exception as e:
+        webhook_logger.error(f"Database error: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 # =========================
 # Health check

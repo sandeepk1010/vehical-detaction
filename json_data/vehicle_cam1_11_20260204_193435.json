@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 11,
+  "camera": "camera1",
+  "plate": "MH15AN4220",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-04T19:34:35.682628",
+  "saved_images": [
+    "MH15AN4220-20260203192842-plate.jpg"
+  ],
+  "request_id": "006e3dbd-a24f-4e14-8a34-e50d2c5b6d2c"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 7,
+  "camera": "camera1",
+  "plate": "VDA563",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-04T19:07:16.714950",
+  "saved_images": [
+    "VDA563-20260203190123-plate.jpg"
+  ],
+  "request_id": "c18a9d91-8f15-4d68-8950-55d70741bad1"
+}

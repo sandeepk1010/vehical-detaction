@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 4,
+  "camera": "camera1",
+  "plate": "MH15AW5563",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-04T19:27:32.559033",
+  "saved_images": [
+    "MH15AW5563-20260203192139-plate.jpg"
+  ],
+  "request_id": "efe38ed4-61ad-444c-90cf-fc814e799720"
+}

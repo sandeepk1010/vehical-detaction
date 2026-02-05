@@ -1,0 +1,12 @@
+{
+  "vehicle_number": 1,
+  "camera": "camera1",
+  "plate": "MH15AB1234",
+  "device_id": "CAMERA1",
+  "timestamp": "2026-02-04T18:49:29.830826",
+  "saved_images": [
+    "cutout.jpg",
+    "normal.jpg"
+  ],
+  "request_id": "80386a72-7302-45d7-8be0-adc347c0cb39"
+}

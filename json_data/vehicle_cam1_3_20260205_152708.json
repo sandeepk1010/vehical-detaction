@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 3,
+  "camera": "camera1",
+  "plate": "CPPLU5",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T15:27:08.055851",
+  "saved_images": [
+    "CPPLU5-20260204152105.jpg"
+  ],
+  "request_id": "53653c9e-41c5-41ff-b448-f13bf92f0f4d"
+}

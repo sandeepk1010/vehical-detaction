@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 150,
+  "camera": "camera1",
+  "plate": "TN1B11EF",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T11:22:06.737701",
+  "saved_images": [
+    "TN1B11EF-20260204111613-plate.jpg"
+  ],
+  "request_id": "080a7a12-8b1e-4eb3-af05-bfb16df9af22"
+}

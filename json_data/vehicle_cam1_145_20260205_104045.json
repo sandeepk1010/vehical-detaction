@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 145,
+  "camera": "camera1",
+  "plate": "MH15FV8809",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T10:40:45.068786",
+  "saved_images": [
+    "MH15FV8809-20260204103451-plate.jpg"
+  ],
+  "request_id": "fa355306-9871-42db-b7eb-deb77ded7e1a"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 2,
+  "camera": "camera1",
+  "plate": "",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T15:20:54.141467",
+  "saved_images": [
+    "noplate-20260204151451.jpg"
+  ],
+  "request_id": "d932cb3e-e50b-461b-a207-9d50f61d3f98"
+}

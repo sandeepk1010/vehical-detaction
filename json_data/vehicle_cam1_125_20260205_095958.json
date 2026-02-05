@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 125,
+  "camera": "camera1",
+  "plate": "OR73500084",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T09:59:58.006318",
+  "saved_images": [
+    "OR73500084-20260204095404-plate.jpg"
+  ],
+  "request_id": "09d6617f-bb67-49b9-9cda-335baae763a4"
+}

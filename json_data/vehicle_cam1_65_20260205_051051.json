@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 65,
+  "camera": "camera1",
+  "plate": "MH15JW8320",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T05:10:51.140726",
+  "saved_images": [
+    "MH15JW8320-20260204050457-plate.jpg"
+  ],
+  "request_id": "2b044959-72e8-4451-a8e6-b2b5329e0327"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 52,
+  "camera": "camera1",
+  "plate": "DTATA",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T04:51:05.937101",
+  "saved_images": [
+    "DTATA-20260204044513-plate.jpg"
+  ],
+  "request_id": "f20203ca-dda2-4c82-a0c2-1b2454971c63"
+}

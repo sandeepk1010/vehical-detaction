@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 85,
+  "camera": "camera1",
+  "plate": "U552",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T06:56:25.357282",
+  "saved_images": [
+    "U552-20260204065032-plate.jpg"
+  ],
+  "request_id": "8f8a63c6-bd34-4944-9581-81f5a190bbe7"
+}

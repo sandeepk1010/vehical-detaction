@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 55,
+  "camera": "camera1",
+  "plate": "MH15CU3001",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T04:59:23.228220",
+  "saved_images": [
+    "MH15CU3001-20260204045330-plate.jpg"
+  ],
+  "request_id": "aee83e9f-eaec-4576-b521-391e042a6417"
+}

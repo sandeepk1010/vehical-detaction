@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 86,
+  "camera": "camera1",
+  "plate": "FE73500784",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T07:03:35.315740",
+  "saved_images": [
+    "FE73500784-20260204065742-plate.jpg"
+  ],
+  "request_id": "7b4eb626-0c91-4ca9-9ccd-c3ac64ef4c16"
+}

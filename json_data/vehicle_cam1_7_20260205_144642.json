@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 7,
+  "camera": "camera1",
+  "plate": "AA32906",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T14:46:42.909651",
+  "saved_images": [
+    "AA32906-20260204144050-plate.jpg"
+  ],
+  "request_id": "7b921cd6-ebfa-42e9-a5ba-51a582e20f7e"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 1,
+  "camera": "camera1",
+  "plate": "LAAD303",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-04T19:23:46.005675",
+  "saved_images": [
+    "LAAD303-20260203191752-plate.jpg"
+  ],
+  "request_id": "589bae6c-c837-4fff-a117-5e3b226ff4c1"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 117,
+  "camera": "camera1",
+  "plate": "MHE700",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T09:42:12.202939",
+  "saved_images": [
+    "MHE700-20260204093619-plate.jpg"
+  ],
+  "request_id": "1ad7de94-a573-4dac-8071-5cf67bcf94ca"
+}

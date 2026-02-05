@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 130,
+  "camera": "camera1",
+  "plate": "TN73S0084",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T10:06:20.691595",
+  "saved_images": [
+    "TN73S0084-20260204100027-plate.jpg"
+  ],
+  "request_id": "ea6951a6-cdd2-4c4d-8ff0-c853a4d3c04d"
+}

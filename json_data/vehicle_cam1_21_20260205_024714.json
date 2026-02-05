@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 21,
+  "camera": "camera1",
+  "plate": "MH06BD4950",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T02:47:14.185780",
+  "saved_images": [
+    "MH06BD4950-20260204024121-plate.jpg"
+  ],
+  "request_id": "aaf65ca2-ad99-4734-9a93-5e20c5ff84d6"
+}

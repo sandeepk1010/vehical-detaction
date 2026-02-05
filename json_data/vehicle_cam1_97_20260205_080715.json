@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 97,
+  "camera": "camera1",
+  "plate": "TN09F1091",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T08:07:15.317003",
+  "saved_images": [
+    "TN09F1091-20260204080122-plate.jpg"
+  ],
+  "request_id": "0625028e-4f77-4466-8bb6-a4fe7b8d5b8f"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 132,
+  "camera": "camera1",
+  "plate": "A44444",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T10:07:13.715294",
+  "saved_images": [
+    "A44444-20260204100120-plate.jpg"
+  ],
+  "request_id": "66b444f9-3832-4f12-a4aa-f99daa5eb331"
+}

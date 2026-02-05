@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 11,
+  "camera": "camera1",
+  "plate": "KAE353",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T02:00:03.598745",
+  "saved_images": [
+    "KAE353-20260204015410-plate.jpg"
+  ],
+  "request_id": "bfeddf3b-ff54-42a1-a712-1c751e353488"
+}

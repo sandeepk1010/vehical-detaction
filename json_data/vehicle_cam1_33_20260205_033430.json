@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 33,
+  "camera": "camera1",
+  "plate": "WB1513779",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T03:34:30.229492",
+  "saved_images": [
+    "WB1513779-20260204032836-plate.jpg"
+  ],
+  "request_id": "3458fb5b-8fcc-40c1-8c4c-0b26e83090e5"
+}

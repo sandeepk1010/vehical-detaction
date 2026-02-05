@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 75,
+  "camera": "camera1",
+  "plate": "KA2222T4",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T05:56:30.910937",
+  "saved_images": [
+    "KA2222T4-20260204055038-plate.jpg"
+  ],
+  "request_id": "dca4889f-8ae5-4d80-a744-f00b513e7920"
+}

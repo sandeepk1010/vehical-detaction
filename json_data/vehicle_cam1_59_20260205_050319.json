@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 59,
+  "camera": "camera1",
+  "plate": "553717",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T05:03:19.477771",
+  "saved_images": [
+    "553717-20260204045726-plate.jpg"
+  ],
+  "request_id": "b3997b9c-9e22-413c-b0b3-ecb9a37a955b"
+}

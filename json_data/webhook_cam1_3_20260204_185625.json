@@ -1,0 +1,20 @@
+{
+  "vehicle_number": 3,
+  "camera": "camera1",
+  "timestamp": "2026-02-04T18:56:25.436452",
+  "event_id": "6b94217d-7a0d-4149-ad83-4a4793fe11f7",
+  "data": {
+    "ReceivedAt": "2026-02-04T18:56:25.394588",
+    "camera": "camera1",
+    "Payload": {
+      "DeviceID": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+      "DeviceModel": "CP-UNC-TT41L3-VM",
+      "DeviceName": "24120125_000212",
+      "DeviceType": "Tollgate",
+      "IPAddress": "192.168.1.108",
+      "IPv6Address": "",
+      "MACAddress": "5c:35:48:8e:f1:9b",
+      "Manufacturer": "General"
+    }
+  }
+}

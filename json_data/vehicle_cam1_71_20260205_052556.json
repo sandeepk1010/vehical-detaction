@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 71,
+  "camera": "camera1",
+  "plate": "TN15M1596",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T05:25:56.657168",
+  "saved_images": [
+    "TN15M1596-20260204052003-plate.jpg"
+  ],
+  "request_id": "462e804d-d509-473c-a7bf-686e683cd3d9"
+}

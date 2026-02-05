@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 6,
+  "camera": "camera1",
+  "plate": "U664",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-04T19:04:18.531150",
+  "saved_images": [
+    "U664-20260203185825-plate.jpg"
+  ],
+  "request_id": "604b97b3-0d57-4a55-b84c-a2a337db2e97"
+}

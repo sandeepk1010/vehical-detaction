@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 34,
+  "camera": "camera1",
+  "plate": "DC6563",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T03:43:48.006728",
+  "saved_images": [
+    "DC6563-20260204033755-plate.jpg"
+  ],
+  "request_id": "af5d3fe9-85ba-49ed-ac59-07558de75f13"
+}

@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 8,
+  "camera": "camera1",
+  "plate": "AHCT703",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T14:46:49.519204",
+  "saved_images": [
+    "AHCT703-20260204144056-plate.jpg"
+  ],
+  "request_id": "f822d919-584d-4e41-8819-5bbe5193dd4e"
+}

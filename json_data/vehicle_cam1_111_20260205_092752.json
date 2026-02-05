@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 111,
+  "camera": "camera1",
+  "plate": "MH15HH1738",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T09:27:52.641870",
+  "saved_images": [
+    "MH15HH1738-20260204092159-plate.jpg"
+  ],
+  "request_id": "12c0ef28-ad6e-4d4c-a7a3-8c6ee1038aed"
+}

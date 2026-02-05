@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 28,
+  "camera": "camera1",
+  "plate": "MH48AG4559",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T03:18:32.123641",
+  "saved_images": [
+    "MH48AG4559-20260204031239-plate.jpg"
+  ],
+  "request_id": "8b55c715-9709-49a6-af17-f2be8773e6a2"
+}

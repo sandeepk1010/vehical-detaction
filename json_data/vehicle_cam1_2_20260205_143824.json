@@ -1,0 +1,11 @@
+{
+  "vehicle_number": 2,
+  "camera": "camera1",
+  "plate": "MH15EL980",
+  "device_id": "6d6c1152-a288-07fd-5f83-ceb54efca288",
+  "timestamp": "2026-02-05T14:38:24.400259",
+  "saved_images": [
+    "MH15EL980-20260204143231-plate.jpg"
+  ],
+  "request_id": "acf4b8bf-acf4-42bd-8db4-c3046d0f03ab"
+}

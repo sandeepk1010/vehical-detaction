@@ -1,0 +1,43 @@
+2026-02-05 14:46:24,434 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 14:46:42,789 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #7 - Plate: AA32906
+2026-02-05 14:46:42,911 - INFO - JSON saved: vehicle_cam1_7_20260205_144642.json
+2026-02-05 14:46:49,389 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #8 - Plate: AHCT703
+2026-02-05 14:46:49,521 - INFO - JSON saved: vehicle_cam1_8_20260205_144649.json
+2026-02-05 14:48:09,100 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #9 - Plate: 0731
+2026-02-05 14:48:09,360 - INFO - JSON saved: vehicle_cam1_9_20260205_144809.json
+2026-02-05 14:49:16,302 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #10 - Plate: MH75HH1737
+2026-02-05 14:49:16,575 - INFO - JSON saved: vehicle_cam1_10_20260205_144916.json
+2026-02-05 14:51:07,653 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #11 - Plate: MH15CK3343
+2026-02-05 14:51:07,843 - INFO - JSON saved: vehicle_cam1_11_20260205_145107.json
+2026-02-05 14:51:24,466 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 14:56:24,491 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:00:28,491 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #12 - Plate: 192168125
+2026-02-05 15:00:28,637 - INFO - JSON saved: vehicle_cam1_12_20260205_150028.json
+2026-02-05 15:01:24,504 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:06:01,148 - INFO - POST /webhook (Camera 1) - VEHICLE #13
+2026-02-05 15:06:01,192 - INFO - JSON saved: webhook_cam1_13_20260205_150601.json
+2026-02-05 15:10:08,443 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:15:08,464 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:20:08,512 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:20:30,631 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #1 - Plate: 
+2026-02-05 15:20:30,760 - INFO - JSON saved: vehicle_cam1_1_20260205_152030.json
+2026-02-05 15:20:54,011 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #2 - Plate: 
+2026-02-05 15:20:54,143 - INFO - JSON saved: vehicle_cam1_2_20260205_152054.json
+2026-02-05 15:25:08,555 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:26:18,426 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #1 - Plate: ACPPL05
+2026-02-05 15:26:18,567 - INFO - JSON saved: vehicle_cam1_1_20260205_152618.json
+2026-02-05 15:27:03,337 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #2 - Plate: 
+2026-02-05 15:27:03,471 - INFO - JSON saved: vehicle_cam1_2_20260205_152703.json
+2026-02-05 15:27:07,930 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #3 - Plate: CPPLU5
+2026-02-05 15:27:08,057 - INFO - JSON saved: vehicle_cam1_3_20260205_152708.json
+2026-02-05 15:27:08,779 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #4 - Plate: 
+2026-02-05 15:27:09,041 - INFO - JSON saved: vehicle_cam1_4_20260205_152709.json
+2026-02-05 15:27:09,337 - INFO - POST /NotificationInfo/TollgateInfo (Camera 1) - VEHICLE #5 - Plate: 
+2026-02-05 15:27:09,483 - INFO - JSON saved: vehicle_cam1_5_20260205_152709.json
+2026-02-05 15:30:08,602 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:35:08,646 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:40:08,666 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:45:08,669 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:50:08,676 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 15:55:08,682 - INFO - Health check from 192.168.1.108 - Camera 1
+2026-02-05 16:00:08,694 - INFO - Health check from 192.168.1.108 - Camera 1
