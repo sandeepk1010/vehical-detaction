@@ -1,0 +1,18 @@
+{
+  "EventID": "d54fca08-5e8f-402f-a929-a167db42fffb",
+  "ReceivedAt": "2026-02-06T20:05:47.849996",
+  "Payload": {
+    "Picture": {
+      "Plate": {
+        "PlateNumber": "TEST123"
+      },
+      "SnapInfo": {
+        "DeviceID": "camera1",
+        "AccurateTime": "2026-02-06T20:00:00"
+      }
+    }
+  },
+  "SavedFolder": "TEST123_camera1_0aa15b68",
+  "SavedImages": [],
+  "SavedJSON": "TEST123_20260206_200547.json"
+}

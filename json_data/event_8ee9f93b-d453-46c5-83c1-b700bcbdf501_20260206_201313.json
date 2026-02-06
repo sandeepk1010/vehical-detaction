@@ -1,0 +1,19 @@
+{
+  "EventID": "8ee9f93b-d453-46c5-83c1-b700bcbdf501",
+  "ReceivedAt": "2026-02-06T20:13:13.471881",
+  "Payload": {
+    "Picture": {
+      "SnapInfo": {
+        "AccurateTime": "2026-02-06T20:10:00",
+        "DeviceID": "test_cam"
+      },
+      "Plate": {
+        "PlateNumber": "CAR999"
+      }
+    }
+  },
+  "RawPayloadSaved": "payload_8ee9f93b-d453-46c5-83c1-b700bcbdf501_20260206_201313.json",
+  "SavedFolder": "CAR999_test_cam_6d3c3f94",
+  "SavedImages": [],
+  "SavedJSON": "CAR999_20260206_201313.json"
+}

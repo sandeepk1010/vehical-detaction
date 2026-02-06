@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-camera"></i>
+                    <h1>Vehicle Detection System</h1>
+                </div>
+                <div class="header-time">
+                    <span id="current-time"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SIDEBAR NAVIGATION -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active" data-tab="dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#datewise" class="nav-link" data-tab="datewise"><i class="fas fa-calendar"></i> By Date</a></li>
+                <li><a href="#cameras" class="nav-link" data-tab="cameras"><i class="fas fa-video"></i> Cameras</a></li>
+                <li><a href="#events" class="nav-link" data-tab="events"><i class="fas fa-list"></i> Live Events</a></li>
+                <li><a href="#search" class="nav-link" data-tab="search"><i class="fas fa-search"></i> Search Plates</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- DASHBOARD TAB -->
+            <section id="dashboard-tab" class="tab-content active">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #3498db;">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Vehicles</h3>
+                            <p class="stat-value" id="total-vehicles">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #2ecc71;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>DB Records</h3>
+                            <p class="stat-value" id="db-records">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #2ecc71;">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Cameras</h3>
+                            <p class="stat-value" id="active-cameras">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #e74c3c;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Detections Today</h3>
+                            <p class="stat-value" id="detections-today">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #f39c12;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Last Detection</h3>
+                            <p class="stat-value" id="last-detection">--</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="color: #9b59b6;">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Sync Status</h3>
+                            <button id="sync-btn" class="btn-small" title="Sync JSON to Database">
+                                <i class="fas fa-sync"></i> Sync
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-card">
+                        <h3><i class="fas fa-chart-bar"></i> Vehicles by Camera</h3>
+                        <canvas id="camera-chart"></canvas>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3><i class="fas fa-chart-pie"></i> Camera Distribution</h3>
+                        <canvas id="distribution-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Plates -->
+                <div class="top-plates-section">
+                    <h3><i class="fas fa-list"></i> Most Detected Plates</h3>
+                    <div class="plates-grid" id="top-plates-list">
+                        <p class="loading">Loading plates...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DATE WISE TAB -->
+            <section id="datewise-tab" class="tab-content">
+                <h2><i class="fas fa-calendar"></i> Detections by Date</h2>
+                <div class="datewise-container">
+                    <div class="datewise-summary" id="datewise-summary">
+                        <p class="loading">Loading date-wise data...</p>
+                    </div>
+                    <div class="datewise-detail" id="datewise-detail"></div>
+                </div>
+            </section>
+
+            <!-- CAMERAS TAB -->
+            <section id="cameras-tab" class="tab-content">
+                <h2><i class="fas fa-video"></i> Camera Status & Statistics</h2>
+                <div class="cameras-grid" id="cameras-list">
+                    <div class="camera-card">
+                        <div class="camera-placeholder">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Loading cameras...</h3>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-chart-bar"></i> Detections by Camera</h3>
+                <div class="camera-stats-grid" id="camera-stats">
+                    <div class="camera-stat-card">
+                        <h4>Camera 1</h4>
+                        <p class="loading">Loading...</p>
+                    </div>
+                    <div class="camera-stat-card">
+                        <h4>Camera 2</h4>
+                        <p class="loading">Loading...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EVENTS TAB -->
+            <section id="events-tab" class="tab-content">
+                <h2><i class="fas fa-list"></i> Live Detection Events</h2>
+                <div class="events-filter">
+                    <input class="filter-input" id="events-search-input" placeholder="Search plate or camera...">
+                    <select id="events-camera-filter" class="filter-input" style="max-width:180px">
+                        <option value="all">All Cameras</option>
+                        <option value="camera1">Camera 1</option>
+                        <option value="camera2">Camera 2</option>
+                    </select>
+                    <button id="refresh-events">Refresh</button>
+                </div>
+                <div class="events-list" id="events-list">
+                    <p class="loading">Loading events...</p>
+                </div>
+            </section>
+
+            <!-- SEARCH TAB -->
+            <section id="search-tab" class="tab-content">
+                <h2><i class="fas fa-search"></i> Search Vehicles</h2>
+                <div class="search-section">
+                    <div class="search-box">
+                        <input type="text" id="plate-search-input" placeholder="Enter vehicle plate number..." class="search-input">
+                        <button id="search-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div id="search-results" class="search-results">
+                        <p class="info-text">Enter a plate number to search...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

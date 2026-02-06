@@ -34,6 +34,34 @@ class Database:
         with self.get_connection() as conn:
             cursor = conn.cursor()
             
+            # Camera 1 Detections Table
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS camera1_detections (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    event_id TEXT NOT NULL,
+                    license_plate TEXT,
+                    vehicle_type TEXT,
+                    confidence REAL,
+                    detection_data TEXT,
+                    image_url TEXT,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            
+            # Camera 2 Detections Table
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS camera2_detections (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    event_id TEXT NOT NULL,
+                    license_plate TEXT,
+                    vehicle_type TEXT,
+                    confidence REAL,
+                    detection_data TEXT,
+                    image_url TEXT,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            
             # WebhookEvents table
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS webhook_events (
@@ -44,11 +72,12 @@ class Database:
                     data TEXT,
                     image_filename TEXT,
                     vehicle_data TEXT,
+                    camera TEXT,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
                 )
             ''')
             
-            # VehicleDetections table
+            # VehicleDetections table (keep for backward compatibility)
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS vehicle_detections (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -77,15 +106,29 @@ class Database:
             conn.commit()
             print(f"Database initialized: {self.db_file}")
     
-    def add_webhook_event(self, event_id, event_type, data, vehicle_data=None, image_filename=None):
-        """Add a webhook event"""
+    def add_webhook_event(self, event_id, event_type, data, vehicle_data=None, image_filename=None, camera=None):
+        """Add a webhook event (stores camera if provided or embedded in data)"""
+        # Try to extract camera from data if not explicitly provided
+        cam = camera
+        try:
+            if not cam and isinstance(data, dict):
+                cam = data.get('camera')
+        except Exception:
+            cam = camera
+
         with self.get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute('''
-                INSERT INTO webhook_events (event_id, event_type, data, vehicle_data, image_filename)
-                VALUES (?, ?, ?, ?, ?)
-            ''', (event_id, event_type, json.dumps(data) if data else None, 
-                  json.dumps(vehicle_data) if vehicle_data else None, image_filename))
+                INSERT INTO webhook_events (event_id, event_type, data, vehicle_data, image_filename, camera)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (
+                event_id,
+                event_type,
+                json.dumps(data) if data else None,
+                json.dumps(vehicle_data) if vehicle_data else None,
+                image_filename,
+                cam
+            ))
             conn.commit()
     
     def add_vehicle_detection(self, event_id, license_plate, detection_data, image_url, vehicle_type=None, confidence=None):
@@ -97,6 +140,27 @@ class Database:
                 VALUES (?, ?, ?, ?, ?, ?)
             ''', (event_id, license_plate, vehicle_type, confidence, 
                   json.dumps(detection_data) if detection_data else None, image_url))
+            conn.commit()
+    
+    def add_camera_detection(self, camera, event_id, license_plate, detection_data, image_url, vehicle_type=None, confidence=None):
+        """Add a vehicle detection record to camera-specific table"""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            table = f"{camera}_detections" if camera in ['camera1', 'camera2'] else 'vehicle_detections'
+            
+            cursor.execute(f'''
+                INSERT INTO {table} (event_id, license_plate, vehicle_type, confidence, detection_data, image_url)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (event_id, license_plate, vehicle_type, confidence, 
+                  json.dumps(detection_data) if detection_data else None, image_url))
+            
+            # Also save to main vehicle_detections for backward compatibility
+            cursor.execute('''
+                INSERT INTO vehicle_detections (event_id, license_plate, vehicle_type, confidence, detection_data, image_url)
+                VALUES (?, ?, ?, ?, ?, ?)
+            ''', (event_id, license_plate, vehicle_type, confidence, 
+                  json.dumps(detection_data) if detection_data else None, image_url))
+            
             conn.commit()
     
     def get_webhook_events(self, limit=20):
@@ -134,6 +198,33 @@ class Database:
             ''', (plate,))
             rows = cursor.fetchall()
             return [dict(row) for row in rows]
+    
+    def get_detections_by_camera(self, camera, limit=50):
+        """Get detections for a specific camera"""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            table = f"{camera}_detections" if camera in ['camera1', 'camera2'] else 'vehicle_detections'
+            
+            cursor.execute(f'''
+                SELECT * FROM {table}
+                ORDER BY created_at DESC
+                LIMIT ?
+            ''', (limit,))
+            rows = cursor.fetchall()
+            return [dict(row) for row in rows]
+    
+    def get_camera_stats(self, camera):
+        """Get statistics for a specific camera"""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            table = f"{camera}_detections" if camera in ['camera1', 'camera2'] else 'vehicle_detections'
+            
+            cursor.execute(f'''
+                SELECT COUNT(*) as total, COUNT(DISTINCT license_plate) as unique_plates
+                FROM {table}
+            ''')
+            result = cursor.fetchone()
+            return dict(result) if result else {'total': 0, 'unique_plates': 0}
     
     def add_server_log(self, level, message, endpoint=None, status_code=None):
         """Add a server log"""

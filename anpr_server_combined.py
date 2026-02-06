@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 db = None
-db_type = "UNKNOWN"
+db_type = None
 
 try:
     from postgres_db import db as pg_db
@@ -65,6 +65,7 @@ def create_logger(name, filename):
     file_path = os.path.join(LOG_DIR, filename)
     handler = logging.FileHandler(file_path)
     handler.setLevel(logging.INFO)
+    handler.flush()  # Flush immediately after creation
 
     formatter = logging.Formatter(
         "%(asctime)s - %(levelname)s - %(message)s"
@@ -84,6 +85,17 @@ cam2_logger = create_logger(
     "camera2_logger",
     f"camera2_{datetime.now().strftime('%Y%m%d')}.log"
 )
+
+# Auto-flush wrapper
+def log_info(logger, msg):
+    logger.info(msg)
+    for handler in logger.handlers:
+        handler.flush()
+
+def log_error(logger, msg):
+    logger.error(msg)
+    for handler in logger.handlers:
+        handler.flush()
 
 
 # =========================
@@ -135,12 +147,12 @@ def cam1_webhook():
     data = request.get_json(force=True, silent=True)
     event_id = str(uuid.uuid4())
 
-    cam1_logger.info(f"/webhook VEHICLE #{vehicle_count}")
+    log_info(cam1_logger, f"/webhook VEHICLE #{vehicle_count}")
 
     try:
         db.add_webhook_event(event_id, "webhook_camera1", data, data)
     except Exception as e:
-        cam1_logger.error(f"DB error: {e}")
+        log_error(cam1_logger, f"DB error: {e}")
 
     save_json({"vehicle": vehicle_count, "data": data}, "webhook", "camera1")
     return jsonify(status="ok", camera="camera1", count=vehicle_count)
@@ -185,7 +197,7 @@ def cam1_tollgate():
 
 @app.route("/health")
 def cam1_health():
-    cam1_logger.info("Health check")
+    log_info(cam1_logger, "Health check")
     return jsonify(camera="camera1", status="healthy", count=vehicle_count)
 
 
@@ -200,12 +212,12 @@ def cam2_webhook():
     data = request.get_json(force=True, silent=True)
     event_id = str(uuid.uuid4())
 
-    cam2_logger.info(f"/webhooks VEHICLE #{vehicle_count1}")
+    log_info(cam2_logger, f"/webhooks VEHICLE #{vehicle_count1}")
 
     try:
         db.add_webhook_event(event_id, "webhook_camera2", data, data)
     except Exception as e:
-        cam2_logger.error(f"DB error: {e}")
+        log_error(cam2_logger, f"DB error: {e}")
 
     save_json({"vehicle": vehicle_count1, "data": data}, "webhook", "camera2")
     return jsonify(status="ok", camera="camera2", count=vehicle_count1)
@@ -249,7 +261,7 @@ def cam2_tollgate():
 
 @app.route("/healths")
 def cam2_health():
-    cam2_logger.info("Health check")
+    log_info(cam2_logger, "Health check")
     return jsonify(camera="camera2", status="healthy", count=vehicle_count1)
 
 
@@ -273,4 +285,4 @@ def index():
 
 if __name__ == "__main__":
     print("🚀 ANPR Server Started")
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=5001, debug=False)

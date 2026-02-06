@@ -1,6 +1,0 @@
-Test log file
-6-7 log
-2026-02-02 20:23:18 - INFO - === UNIFIED SERVER STARTED (Port 8083) ===
-2026-02-02 20:27:27 - INFO - POST/GET /health from 192.168.1.108
-2026-02-02 20:29:20 - INFO - POST /NotificationInfo/TollgateInfo - VEHICLE #1 - Plate: AA1N0, Saved: 0 images
-2026-02-02 20:29:20 - INFO - JSON saved: vehicle_1_20260202_202920.json

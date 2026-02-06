@@ -1,0 +1,11 @@
+{
+  "Picture": {
+    "SnapInfo": {
+      "AccurateTime": "2026-02-06T20:10:00",
+      "DeviceID": "test_cam"
+    },
+    "Plate": {
+      "PlateNumber": "CAR999"
+    }
+  }
+}
